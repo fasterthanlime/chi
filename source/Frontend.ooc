@@ -2,13 +2,13 @@
 import text/Opts
 
 // our deps
-import Ast
+import REPL
 
 Frontend: class {
 
     init: func (opts: Opts) {
 
-        path := opts args first()
+        REPL new()
 
     }
 

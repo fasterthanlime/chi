@@ -20,6 +20,8 @@ HValue: class {
 
 HInstruction: class {
 
+    noop := static new()
+
     eval: func (scope: HScope) -> HScope {
         scope
     }
