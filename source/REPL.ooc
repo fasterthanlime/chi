@@ -1,6 +1,6 @@
 
-use readline
-import readline
+use linenoise
+import linenoise
 
 import Ast
 
@@ -18,8 +18,12 @@ REPL: class {
             line := readLine()
             if (line) {
                 scope = interpreter eval(readLine(), scope)
+                "->" println()
+                scope _ println()
             } else {
                 // EOF (aka C^D)
+                println()
+                "Goodbye!" println()
                 running = false
             }
         }
@@ -30,7 +34,7 @@ REPL: class {
     }
 
     readLine: func -> String {
-        Readline readLine(">> ")
+        LineNoise readLine()
     }
 
 }

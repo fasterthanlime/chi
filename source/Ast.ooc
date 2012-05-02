@@ -71,6 +71,7 @@ HScope: class extends HValue {
             sb append("%s: %s" format(k, v _))
         )
         sb append(")")
+        sb toString()
     }
 
 }
